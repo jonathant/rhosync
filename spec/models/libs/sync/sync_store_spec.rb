@@ -22,7 +22,11 @@ describe "sync store" do
     @data,@data['1'],@data['2'] = {},@product1,@product2
     
     @sync_store = SyncStore.new
-    @sync_store.db.flushdb
+    begin
+      @sync_store.db.flushdb
+    rescue
+      puts "WARNING... Could not connect to redis!" 
+    end
   end
   
   it "should add simple data to new set" do
