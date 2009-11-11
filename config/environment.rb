@@ -36,6 +36,7 @@ Rails::Initializer.run do |config|
   config.gem "libxml-ruby", :lib => "xml/libxml"
   config.gem "datanoise-actionwebservice", :lib => "actionwebservice", :version => "2.2.2"  
   config.gem "ar-extensions", :version => ">=0.9.2"
+  config.gem "redis", :lib => "redis", :version => ">=0.1"
 
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
